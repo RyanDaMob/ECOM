@@ -1,0 +1,366 @@
+:root {
+    --primary-color: #70e000; /* Light green for accents */
+    --secondary-color: #333; /* Darker gray for text */
+    --bg-color: rgba(255, 255, 255, 0.9); /* Light background for form */
+    --footer-bg: #333; /* Dark background for footer */
+    --footer-text-color: white; /* Footer text color */
+        --pink:#70e000;
+    }
+    
+    html, body {
+        height: 100%; /* Full height for both html and body */
+        margin: 0; /* Remove any default margin */
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Push footer to bottom */
+        font-family: 'Arial', sans-serif;
+        background: url(images/bglogin.jpg) no-repeat center center/cover;
+    }
+
+    *{
+        margin:0; padding:0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        outline: none; border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+    
+    html{
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+    }
+    
+    section{
+        padding: 2rem 9%;
+    }
+
+/* Header Styles */
+
+
+/* Header Styles */
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: var(--pink);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0  .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo1{
+    font-size: 3rem;
+    color:  #333;
+    font-weight: bolder;
+}
+
+header .logo1 span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #000;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius:  .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    color: #000;
+}
+
+
+.ddc{
+    font-size: 10px;
+}
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon i {
+    margin-right: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 160px;
+    border-radius: 5px;
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu:hover .dropdown-content {
+    display: block;
+}
+
+.user-menu:hover .user-icon {
+    color: #555;
+}
+
+
+
+
+
+/* Center Content */
+.signup {
+    margin: 8rem auto; /* Keeps form centered */
+    flex: 1; /* Takes up available space */
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+.signup h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.signup label {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.signup input {
+    width: 90%;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    transition: border 0.3s ease-in-out;
+}
+
+.signup input:focus {
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+
+.signup button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.signup button:hover {
+    background-color: var(--secondary-color);
+}
+
+.signup a.goli {
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.signup a.goli:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    padding: 2rem 0;
+    text-align: center;
+    flex-shrink: 0; /* Ensures footer doesn't shrink */
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0.5rem;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 2rem;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    header label {
+        display: inline-block;
+    }
+
+    #toggler:checked + .navbar {
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #toggler:checked + .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Responsive header styles for smaller screens */
+@media (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header label {
+        display: inline-block;
+    }
+
+    #toggler:checked + .navbar {
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #toggler:checked + .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+}
